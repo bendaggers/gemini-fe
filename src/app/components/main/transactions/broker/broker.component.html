@@ -1,0 +1,18 @@
+<div class="mb-3">
+  <label for="Broker" class="mb-2">Broker</label>
+  <select
+    class="form-select"
+    id="Broker"
+    name="Broker"
+    aria-label="Broker"
+    [(ngModel)]="broker"
+    (change)="update()"
+    required
+    #txnDateControl="ngModel"
+  >
+    <option selected disabled>Select Broker</option>
+    <option value="AAA Equities">AAA Equities</option>
+    <option value="Timson Trade">Timson Trade</option>
+    <option value="Philstocks Financial">Philstocks Financial</option>
+  </select>
+</div>

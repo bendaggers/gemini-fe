@@ -1,0 +1,32 @@
+<table class="table table-hover">
+  <thead>
+    <tr class="bg-primary text-light p-4 text-center">
+      <th scope="col">Transaction No.</th>
+      <th scope="col">Transaction Date</th>
+      <th scope="col">Broker</th>
+      <th scope="col">Order</th>
+      <th scope="col">Stock</th>
+      <th scope="col">Share Price</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Gross</th>
+      <th scope="col">Fees</th>
+      <th scope="col">Total Cost</th>
+      <th scope="col">Ave. Unit Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let tr of transactions">
+      <td scope="row" class="text-start">{{ tr.txnno }}</td>
+      <td class="text-center">{{ tr.txndate }}</td>
+      <td class="text-center">{{ tr.broker }}</td>
+      <td class="text-center">{{ tr.order }}</td>
+      <td class="text-center">{{ tr.ticker | uppercase }}</td>
+      <td class="text-end">{{ tr.shareprice | number : "1.4-4" }}</td>
+      <td class="text-end">{{ tr.quantity | number : "1.4-4" }}</td>
+      <td class="text-end">{{ tr.gross | number : "1.4-4" }}</td>
+      <td class="text-end">{{ tr.totalfees | number : "1.4-4" }}</td>
+      <td class="text-end">{{ tr.totalcost | number : "1.4-4" }}</td>
+      <td class="text-end">{{ tr.aveunitprice | number : "1.4-4" }}</td>
+    </tr>
+  </tbody>
+</table>
