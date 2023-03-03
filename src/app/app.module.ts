@@ -14,14 +14,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { TransactionsComponent } from './components/main/transactions/transactions.component';
 import { PortfolioComponent } from './components/main/portfolio/portfolio.component';
 import { ScreenerComponent } from './components/main/screener/screener.component';
-import { TxndateComponent } from './components/main/transactions/txndate/txndate.component';
-import { BrokerComponent } from './components/main/transactions/broker/broker.component';
-import { OrderComponent } from './components/main/transactions/order/order.component';
-import { TickerComponent } from './components/main/transactions/ticker/ticker.component';
-import { QuantityComponent } from './components/main/transactions/quantity/quantity.component';
-import { PriceComponent } from './components/main/transactions/price/price.component';
-import { TxnfeesComponent } from './components/main/transactions/txnfees/txnfees.component';
-import { TransactionlistComponent } from './components/main/transactions/transactionlist/transactionlist.component';
+import { TransactionListComponent } from './components/main/transactions/transaction-list/transaction-list.component';
 
 @NgModule({
   declarations: [
@@ -32,14 +25,7 @@ import { TransactionlistComponent } from './components/main/transactions/transac
     TransactionsComponent,
     PortfolioComponent,
     ScreenerComponent,
-    TxndateComponent,
-    BrokerComponent,
-    OrderComponent,
-    TickerComponent,
-    QuantityComponent,
-    PriceComponent,
-    TxnfeesComponent,
-    TransactionlistComponent,
+    TransactionListComponent,
   ],
   imports: [
     BrowserModule,

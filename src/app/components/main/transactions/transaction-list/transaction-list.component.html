@@ -1,0 +1,30 @@
+<table class="table text-small">
+  <thead>
+    <tr>
+      <th scope="col">Transaction No.</th>
+      <th scope="col">Transaction Date</th>
+      <th scope="col">Broker</th>
+      <th scope="col">Transaction</th>
+      <th scope="col">Ticker</th>
+      <th scope="col">Number of Shares</th>
+      <th scope="col">Unit Price</th>
+      <th scope="col">Average Unit Price</th>
+      <th scope="col">Total Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let transaction of transactions">
+      <td scope="row">{{ transaction.txnno }}</td>
+      <td>{{ transaction.txndate }}</td>
+      <td>{{ transaction.broker }}</td>
+      <td>{{ transaction.order }}</td>
+      <td>{{ transaction.ticker | uppercase }}</td>
+      <td class="text-end">{{ transaction.quantity }}</td>
+      <td class="text-end">{{ transaction.shareprice | number : "1.4-4" }}</td>
+      <td class="text-end">
+        {{ transaction.aveunitprice | number : "1.4-4" }}
+      </td>
+      <td class="text-end">{{ transaction.totalcost | number : "1.4-4" }}</td>
+    </tr>
+  </tbody>
+</table>

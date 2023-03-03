@@ -1,39 +1,27 @@
-<form (submit)="createTransaction()">
+<form>
   <div class="form-group p-0 m-0">
     <div class="row">
-      <div class="col-auto">
-        <txndate #txndate></txndate>
-      </div>
+      <div class="col-auto"></div>
 
-      <div class="col-auto">
-        <broker #broker></broker>
-      </div>
+      <div class="col-auto"></div>
 
-      <div class="col-auto">
-        <order #order></order>
-      </div>
+      <div class="col-auto"></div>
 
-      <div class="col-auto">
-        <ticker #ticker></ticker>
-      </div>
+      <div class="col-auto"></div>
 
-      <div class="col-auto">
-        <qty #qty></qty>
-      </div>
+      <div class="col-auto"></div>
 
-      <div class="col-auto">
-        <price #price></price>
-      </div>
-
-      <txnfees></txnfees>
+      <div class="col-auto"></div>
     </div>
 
     <button class="btn-primary btn">Submit</button>
   </div>
 </form>
+
 <hr />
+
 <div class="row">
   <div class="col-auto">
-    <transactionlist [transactions]="transactions"></transactionlist>
+    <transaction-list></transaction-list>
   </div>
 </div>
