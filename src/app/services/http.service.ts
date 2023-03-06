@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { TransactionData } from '../interface/transaction-data';
 
 @Injectable({
   providedIn: 'root',
@@ -13,5 +14,9 @@ export class HttpService {
   // GET Transactions List
   getTransactions(): Observable<any> {
     return this.http.get(this.apiUrl);
+  }
+
+  postTransaction(transaction: TransactionData): Observable<any> {
+    return this.http.post(this.apiUrl, transaction);
   }
 }

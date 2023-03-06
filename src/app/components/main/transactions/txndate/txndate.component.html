@@ -1,0 +1,15 @@
+<div class="mb-3">
+  <label for="txnDate" class="mb-2">Transaction Date</label>
+  <div class="input-group">
+    <input
+      placeholder="MMDDYYYY"
+      type="date"
+      class="form-control"
+      id="txnDate"
+      name="txnDate"
+      aria-label="Enter Date"
+      required
+      (input)="updateTxnDate($event)"
+    />
+  </div>
+</div>

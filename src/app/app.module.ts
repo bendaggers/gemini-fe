@@ -15,6 +15,8 @@ import { TransactionsComponent } from './components/main/transactions/transactio
 import { PortfolioComponent } from './components/main/portfolio/portfolio.component';
 import { ScreenerComponent } from './components/main/screener/screener.component';
 import { TransactionListComponent } from './components/main/transactions/transaction-list/transaction-list.component';
+import { TxndateComponent } from './components/main/transactions/txndate/txndate.component';
+import { OrderComponent } from './components/main/transactions/order/order.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { TransactionListComponent } from './components/main/transactions/transac
     PortfolioComponent,
     ScreenerComponent,
     TransactionListComponent,
+    TxndateComponent,
+    OrderComponent,
   ],
   imports: [
     BrowserModule,

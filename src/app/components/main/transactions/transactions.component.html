@@ -1,9 +1,13 @@
 <form>
   <div class="form-group p-0 m-0">
     <div class="row">
-      <div class="col-auto"></div>
+      <div class="col-auto">
+        <txndate></txndate>
+      </div>
 
-      <div class="col-auto"></div>
+      <div class="col-auto">
+        <order></order>
+      </div>
 
       <div class="col-auto"></div>
 
@@ -14,7 +18,7 @@
       <div class="col-auto"></div>
     </div>
 
-    <button class="btn-primary btn">Submit</button>
+    <button class="btn-primary btn" (click)="onSubmit()">Submit</button>
   </div>
 </form>
 
