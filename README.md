@@ -8,7 +8,9 @@ Screener - real time stock price update.
 
 ## v1.2.0 (Toast Notifications)
 
-- 03/09/2023 - 6:29PM: Added Toast Notifications if form submission is successful _(not working yet)_.
+**03/09/2023 - 6:29PM**
+
+- Added Toast Notifications if form submission is successful _(not working yet)_.
 
 ## v1.1.4
 
