@@ -6,7 +6,7 @@ Transactions - record all stock transactions
 Portfolio - summary of portfolio.
 Screener - real time stock price update.
 
-## v1.2.0
+## v1.2.0 (Toast Notifications)
 
 - Added Toast Notifications if form submission is successful _(not working yet)_.
 
