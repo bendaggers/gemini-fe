@@ -6,6 +6,10 @@ Transactions - record all stock transactions
 Portfolio - summary of portfolio.
 Screener - real time stock price update.
 
+## v1.2.0
+
+- Added Toast Notifications if form submission is successful _(not working yet)_.
+
 ## v1.1.4
 
 ### Added or Changed
@@ -59,10 +63,13 @@ Screener - real time stock price update.
 
 ## Pending Items
 
-- Form Validation before submission
-- Change Bootstrap Theme Colors
+- Toast Notification
+
+## Future Features
+
 - Add notification for Form Validation
+- Form Validation before submission
 - Clickable Individual Transaction through modal
-- Log in for existing users
 - Create Validation if the form is valid or not. Submit button must be disabled or unclickable if not valid or initial state.
-- Create a notification service.
+- Change Bootstrap Theme Colors
+- Log in for existing users

@@ -22,7 +22,7 @@ import { BrokerComponent } from './components/main/transactions/broker/broker.co
 import { TickerComponent } from './components/main/transactions/ticker/ticker.component';
 import { QuantityComponent } from './components/main/transactions/quantity/quantity.component';
 import { SharepriceComponent } from './components/main/transactions/shareprice/shareprice.component';
-
+import { NotificationComponent } from './components/main/transactions/notification/notification.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +40,7 @@ import { SharepriceComponent } from './components/main/transactions/shareprice/s
     QuantityComponent,
     SharepriceComponent,
     OrderByPipe,
+    NotificationComponent,
   ],
   imports: [
     BrowserModule,
