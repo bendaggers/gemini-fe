@@ -6,12 +6,23 @@ Transactions - record all stock transactions
 Portfolio - summary of portfolio.
 Screener - real time stock price update.
 
+## v1.1.2
+
+### Added or Changed
+
+- Added Broker Component
+- Created a validation that only accepts 'AAA', 'Philstocks & 'Timson' as valid brokers.
+- Added a Stock data Interface
+- Added a Stock data Service
+- Added a Ticker Component
+- Created a validation for Ticker if not valid
+
 ## v1.1.1
 
 ### Added or Changed
 
 - Improved the Transaction Data Service
-- Moved the Transaction Object to Transaction Data Service for optimiztion
+- Moved the Transaction Object to Transaction Data Service for optimization
 - Added Order Component
 
 ## v1.1.0
@@ -41,3 +52,6 @@ Screener - real time stock price update.
 - Change Bootstrap Theme Colors
 - Add notification for Form Validation
 - Clickable Individual Transaction through modal
+- Log in for existing users
+- Create Validation if the form is valid or not. Submit button must be disabled or unclickable if not valid or initial state.
+- Create a notification service.

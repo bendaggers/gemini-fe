@@ -25,15 +25,13 @@ export class TransactionsComponent implements OnInit {
       .subscribe(
         (response) => {
           console.log(response);
+          console.log(this.transactiondataService.getTransaction());
         },
         (error) => {
           console.error(error);
           console.log(this.transactiondataService.getTransaction());
         }
       );
-
-    console.log(this.transactiondataService.getTxnDate());
-    console.log(this.transactiondataService.getOrder());
   }
 
   updateTransactionObject(): void {

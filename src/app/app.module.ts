@@ -17,6 +17,8 @@ import { ScreenerComponent } from './components/main/screener/screener.component
 import { TransactionListComponent } from './components/main/transactions/transaction-list/transaction-list.component';
 import { TxndateComponent } from './components/main/transactions/txndate/txndate.component';
 import { OrderComponent } from './components/main/transactions/order/order.component';
+import { BrokerComponent } from './components/main/transactions/broker/broker.component';
+import { TickerComponent } from './components/main/transactions/ticker/ticker.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { OrderComponent } from './components/main/transactions/order/order.compo
     TransactionListComponent,
     TxndateComponent,
     OrderComponent,
+    BrokerComponent,
+    TickerComponent,
   ],
   imports: [
     BrowserModule,
