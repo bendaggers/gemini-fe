@@ -13,7 +13,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let transaction of transactions">
+    <tr *ngFor="let transaction of transactions | orderBy : 'txndate'">
       <td scope="row">{{ transaction.txnno }}</td>
       <td>{{ transaction.txndate }}</td>
       <td>{{ transaction.broker }}</td>

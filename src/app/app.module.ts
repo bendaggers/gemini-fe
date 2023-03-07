@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms'; // Import the ReactiveFormsModule
+import { OrderByPipe } from './pipes/order-by.pipe';
 
 import { HeaderComponent } from './components/header/header.component';
 import { MainComponent } from './components/main/main.component';
@@ -38,6 +39,7 @@ import { SharepriceComponent } from './components/main/transactions/shareprice/s
     TickerComponent,
     QuantityComponent,
     SharepriceComponent,
+    OrderByPipe,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,7 @@ import { SharepriceComponent } from './components/main/transactions/shareprice/s
     HttpClientModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [OrderByPipe],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
