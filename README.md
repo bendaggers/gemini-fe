@@ -29,3 +29,15 @@ Screener - real time stock price update.
 
 - Deleted all the components of Transactions Feature
 - Started from scratch
+
+## Pending Items
+
+- Quantity Component
+- Share Price Component
+- Ticker Component
+- Move fees calculation, ave unit price, total fees, total cost in back end.
+- Form Validation before submission
+- Update of Transaction List after Form Submission
+- Change Bootstrap Theme Colors
+- Add notification for Form Validation
+- Clickable Individual Transaction through modal
