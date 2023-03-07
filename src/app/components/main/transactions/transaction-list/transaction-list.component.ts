@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { HttpService } from 'src/app/services/http.service';
 import { OrderByPipe } from 'src/app/pipes/order-by.pipe';
 
@@ -9,7 +9,9 @@ import { OrderByPipe } from 'src/app/pipes/order-by.pipe';
   providers: [OrderByPipe], // Add OrderByPipe as a provider
 })
 export class TransactionListComponent implements OnInit {
-  transactions!: any[];
+  @Input() transactions: any[] = [];
+
+  newTransaction: any = {};
 
   constructor(
     private httpService: HttpService,

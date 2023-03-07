@@ -57,4 +57,9 @@ export class TickerComponent implements OnInit {
   onBlur(): void {
     this.showSuggestions = false;
   }
+
+  clearTicker(): void {
+    const inputElement = document.getElementById('Ticker') as HTMLInputElement;
+    inputElement.value = '';
+  }
 }

@@ -21,4 +21,11 @@ export class SharepriceComponent implements OnInit {
       this.transactiondataservice.changeSharePrice(SharePriceNum);
     }
   }
+
+  clearShareprice(): void {
+    const inputElement = document.getElementById(
+      'Shareprice'
+    ) as HTMLInputElement;
+    inputElement.value = '';
+  }
 }

@@ -21,4 +21,11 @@ export class QuantityComponent implements OnInit {
       this.transactiondataservice.changeQuantity(quantityNum);
     }
   }
+
+  clearQuantity(): void {
+    const inputElement = document.getElementById(
+      'Quantity'
+    ) as HTMLInputElement;
+    inputElement.value = '';
+  }
 }

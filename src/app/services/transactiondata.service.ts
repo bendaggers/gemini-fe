@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { TransactionData } from 'src/app/interface/transaction-data';
 
 @Injectable({
   providedIn: 'root',
@@ -99,8 +98,6 @@ export class TransactiondataService {
     }
     return SharePrice;
   }
-
-  // SHARE PRICE
 
   //
   // Transaction Object

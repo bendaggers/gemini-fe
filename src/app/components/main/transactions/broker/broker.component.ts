@@ -18,4 +18,9 @@ export class BrokerComponent implements OnInit {
       this.transactiondataservice.changeBroker(Broker);
     }
   }
+
+  clearBroker(): void {
+    const inputElement = document.getElementById('Broker') as HTMLInputElement;
+    inputElement.value = 'Select Broker';
+  }
 }

@@ -11,6 +11,8 @@ Screener - real time stock price update.
 ### Added or Changed
 
 - Rearranged Transaction List to Newest to Oldest (Descending Order)
+- Update Transaction List after button press Submit to include new transaction
+- Added a clear() to reset all the input fields to its initial state after Submit button press event
 
 ## v1.1.3
 
@@ -58,7 +60,6 @@ Screener - real time stock price update.
 ## Pending Items
 
 - Form Validation before submission
-- Update of Transaction List after Form Submission
 - Change Bootstrap Theme Colors
 - Add notification for Form Validation
 - Clickable Individual Transaction through modal

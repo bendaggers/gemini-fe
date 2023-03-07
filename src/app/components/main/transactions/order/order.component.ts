@@ -20,4 +20,9 @@ export class OrderComponent implements OnInit {
       this.transactiondataservice.changeOrder(Order);
     }
   }
+
+  clearOrder(): void {
+    const inputElement = document.getElementById('Order') as HTMLInputElement;
+    inputElement.value = 'Select Order';
+  }
 }

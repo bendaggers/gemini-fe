@@ -7,6 +7,8 @@ import { TransactiondataService } from 'src/app/services/transactiondata.service
   styleUrls: ['./txndate.component.scss'],
 })
 export class TxndateComponent implements OnInit {
+  txnDate: string = '';
+
   constructor(private transactiondataservice: TransactiondataService) {}
 
   ngOnInit(): void {
@@ -19,5 +21,10 @@ export class TxndateComponent implements OnInit {
     if (txnDate) {
       this.transactiondataservice.changeTxnDate(txnDate);
     }
+  }
+
+  clearTxnDate(): void {
+    const inputElement = document.getElementById('txnDate') as HTMLInputElement;
+    inputElement.value = '';
   }
 }
