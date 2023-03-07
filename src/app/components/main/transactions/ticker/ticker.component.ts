@@ -12,7 +12,7 @@ export class TickerComponent implements OnInit {
   stocks: Stock[] = [];
   filteredStocks: Stock[] = [];
   invalidTicker = false;
-  showSuggestions = false; // Add flag to indicate if input field is in focus
+  showSuggestions = false;
 
   constructor(
     private transactiondataservice: TransactiondataService,

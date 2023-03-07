@@ -54,8 +54,6 @@ export class TransactiondataService {
     return broker;
   }
 
-  // TICKER
-
   private tickerSource = new BehaviorSubject<string>('');
   currentTicker = this.tickerSource.asObservable();
 
@@ -65,11 +63,44 @@ export class TransactiondataService {
 
   getTicker(): string {
     const ticker = this.tickerSource.getValue().toUpperCase();
-
     return ticker;
   }
 
-  // TICKER
+  private quantitySource = new BehaviorSubject<number>(0);
+  currentQuantity = this.quantitySource.asObservable();
+
+  changeQuantity(Quantity: number) {
+    this.quantitySource.next(Quantity);
+  }
+
+  getQuantity(): number {
+    const quantity = this.quantitySource.getValue();
+    if (quantity === 0 || quantity == null) {
+      throw new Error('Enter Correct Quantity!');
+      // Insert Error functionality here!
+    }
+    return quantity;
+  }
+
+  // SHARE PRICE
+
+  private sharePriceSource = new BehaviorSubject<number>(0);
+  currentSharePrice = this.sharePriceSource.asObservable();
+
+  changeSharePrice(SharePrice: number) {
+    this.sharePriceSource.next(SharePrice);
+  }
+
+  getSharePrice(): number {
+    const SharePrice = this.sharePriceSource.getValue();
+    if (SharePrice === 0 || SharePrice == null) {
+      throw new Error('Enter correct Share Price!');
+      // Insert Error functionality here!
+    }
+    return SharePrice;
+  }
+
+  // SHARE PRICE
 
   //
   // Transaction Object
@@ -81,18 +112,8 @@ export class TransactiondataService {
       order: this.getOrder(),
       broker: this.getBroker(),
       ticker: this.getTicker(),
-      quantity: 300,
-      shareprice: 30.5,
-      recdate: '1984-05-31',
-      gross: 1,
-      commission: 1,
-      vat: 1,
-      pse: 1,
-      sccp: 1,
-      salestax: 1,
-      totalfees: 1,
-      totalcost: 1,
-      aveunitprice: 1,
+      quantity: this.getQuantity(),
+      shareprice: this.getSharePrice(),
     };
   }
 }

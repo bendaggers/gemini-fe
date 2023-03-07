@@ -19,6 +19,8 @@ import { TxndateComponent } from './components/main/transactions/txndate/txndate
 import { OrderComponent } from './components/main/transactions/order/order.component';
 import { BrokerComponent } from './components/main/transactions/broker/broker.component';
 import { TickerComponent } from './components/main/transactions/ticker/ticker.component';
+import { QuantityComponent } from './components/main/transactions/quantity/quantity.component';
+import { SharepriceComponent } from './components/main/transactions/shareprice/shareprice.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { TickerComponent } from './components/main/transactions/ticker/ticker.co
     OrderComponent,
     BrokerComponent,
     TickerComponent,
+    QuantityComponent,
+    SharepriceComponent,
   ],
   imports: [
     BrowserModule,

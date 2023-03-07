@@ -1,0 +1,13 @@
+<div class="mb-3">
+  <label for="Quantity" class="mb-2">Quantity</label>
+  <input
+    type="number"
+    class="form-control whole-number-input"
+    name="Quantity"
+    id="Quantity"
+    step="1"
+    placeholder="Quantity"
+    required
+    (input)="updateQuantity($event)"
+  />
+</div>

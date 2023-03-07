@@ -6,6 +6,14 @@ Transactions - record all stock transactions
 Portfolio - summary of portfolio.
 Screener - real time stock price update.
 
+## v1.1.3
+
+### Added or Changed
+
+- Added Quantity Component
+- Added Share Price
+- Modified the Transaction Data by removing Calculation in the FE and move to BE.
+
 ## v1.1.2
 
 ### Added or Changed
@@ -43,10 +51,7 @@ Screener - real time stock price update.
 
 ## Pending Items
 
-- Quantity Component
-- Share Price Component
-- Ticker Component
-- Move fees calculation, ave unit price, total fees, total cost in back end.
+- Arrange Transaction List according to Transaction Date
 - Form Validation before submission
 - Update of Transaction List after Form Submission
 - Change Bootstrap Theme Colors
