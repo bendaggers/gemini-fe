@@ -1,8 +1,8 @@
 # Gemini Front End
 
-**Gemini** is a capstone project made by Ben Michael Oracion. It's main purpose is to record, monitor, analyze stock trading transaction.
+**Gemini**, created by Ben Michael Oracion, is a robust capstone project designed to record, monitor, and analyze stock trading transactions. Its main purpose is to provide a comprehensive solution for investors to track their investments seamlessly. In addition, Gemini is expected to deliver real-time stock prices, candlestick analysis, and technical indicators in the future.
 
-In the future, **Gemini** will be capable to display real-time stock prices, candle stick analysis and technical indicators. 
+The platform boasts several exciting features, including the ability to record all stock transactions, providing a clear summary of all stock positions in the portfolio, and offering real-time stock price updates, technical indicators, and candlestick analysis through the screener tool. These features make Gemini a valuable tool for investors seeking to make informed investment decisions.
 
 ## Features
 
