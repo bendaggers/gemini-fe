@@ -20,6 +20,8 @@ The platform boasts several exciting features, including the ability to record a
 - Log in for existing users
 - Back end to be published in DigitalOcean 
 
+---
+
 ## v1.4.0 (Display Transaction Details in Modal)
 **In-Progress | 03/08/2023 - 5:14PM**
 
