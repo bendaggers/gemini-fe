@@ -11,6 +11,7 @@ Screener - real time stock price update.
 ## Pending Items
 
 - Clickable Individual Transaction through modal
+- Fix notification body font style and color.
 
 ## Future Features
 
