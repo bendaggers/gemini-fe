@@ -31,7 +31,7 @@ We aim to create a feature that enables users to view transaction details in a m
 
 - ~~Create a Modal Component~~
 - Create service
-- Create a back end API Endpoint for Transaction that accepts arguments
+- Create a back end API Endpoint for Transaction that accepts txnId as arguments
 - Create function to get the selected row's txnid
 - Create new HTTP Service for the 'single' transaction that accepts txnId as a parameter.
 - Display selected Transaction's detail in a modal.
