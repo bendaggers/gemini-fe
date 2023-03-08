@@ -88,13 +88,16 @@ Screener - real time stock price update.
 
 ## Pending Items
 
-- ~~Add notification for Form Validation~~
-- ~~Form Validation before submission~~
-- ~~Toast Notification~~
+- Clickable Individual Transaction through modal
 
 ## Future Features
 
-- Clickable Individual Transaction through modal
-- Create Validation if the form is valid or not. Submit button must be disabled or unclickable if not valid or initial state.
 - Change Bootstrap Theme Colors
 - Log in for existing users
+
+## Completed Items
+
+- ~~Add notification for Form Validation~~
+- ~~Form Validation before submission~~
+- ~~Toast Notification~~
+- ~~Create Validation if the form is valid or not. Submit button must be disabled or unclickable if not valid or initial state.~~
