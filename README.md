@@ -6,6 +6,14 @@ Transactions - record all stock transactions
 Portfolio - summary of portfolio.
 Screener - real time stock price update.
 
+## v1.3.1 (Notification Toast during Invalid Form Submission)
+
+- Instead of implementing form validation, I have implemented a toast to notify the user to verify the submitted form. Since the user cannot make a POST request if the form is invalid, using the button state is not an ideal or practical approach.
+
+## v1.3.0 (Form Validation)
+
+- This feature will enable disable the submit button depending if the Transaction Data is complete and ready for submission.
+
 ## v1.2.2 (Transaction Data Object Bug)
 
 - **Fixed!** ~~Found bug at the Submit button when it still remembers the values you have submitted even if the forms are already cleared. Its as if the Transaction Object didn't clear the attributes.~~
@@ -80,12 +88,12 @@ Screener - real time stock price update.
 
 ## Pending Items
 
-- Toast Notification
+- ~~Add notification for Form Validation~~
+- ~~Form Validation before submission~~
+- ~~Toast Notification~~
 
 ## Future Features
 
-- Add notification for Form Validation
-- Form Validation before submission
 - Clickable Individual Transaction through modal
 - Create Validation if the form is valid or not. Submit button must be disabled or unclickable if not valid or initial state.
 - Change Bootstrap Theme Colors

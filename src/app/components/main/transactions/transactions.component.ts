@@ -20,6 +20,7 @@ import { TickerComponent } from './ticker/ticker.component';
 import { SharepriceComponent } from './shareprice/shareprice.component';
 import { QuantityComponent } from './quantity/quantity.component';
 import { NotificationComponent } from './notification/notification.component';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-transactions',
@@ -84,13 +85,21 @@ export class TransactionsComponent implements OnInit {
           );
         },
         (error) => {
-          console.error(error);
-          console.log(this.transaction);
+          this.notificationService.showToast(
+            'Error!',
+            'Please check the form before submission!',
+            'danger',
+            this.notificationComponent
+          );
         }
       );
 
     // This will Reset Input Values stored in memory.
     this.resetInputValues();
+  }
+
+  logTxnDate(): void {
+    console.log(this.transactiondataService.getTransaction().txndate);
   }
 
   @ViewChild(TxndateComponent)

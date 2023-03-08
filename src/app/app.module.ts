@@ -23,6 +23,7 @@ import { TickerComponent } from './components/main/transactions/ticker/ticker.co
 import { QuantityComponent } from './components/main/transactions/quantity/quantity.component';
 import { SharepriceComponent } from './components/main/transactions/shareprice/shareprice.component';
 import { NotificationComponent } from './components/main/transactions/notification/notification.component';
+import { NotificationService } from './services/notification.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +51,7 @@ import { NotificationComponent } from './components/main/transactions/notificati
     HttpClientModule,
     ReactiveFormsModule,
   ],
-  providers: [OrderByPipe],
+  providers: [OrderByPipe, NotificationService, NotificationComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

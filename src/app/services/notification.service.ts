@@ -9,7 +9,7 @@ export class NotificationService {
     title: string,
     body: string,
     color: string,
-    notificationComponent: NotificationComponent
+    notificationComponent?: NotificationComponent
   ): void {
     if (notificationComponent) {
       notificationComponent.theshow(title, body, color);

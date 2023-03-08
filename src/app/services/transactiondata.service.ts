@@ -1,11 +1,18 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { TransactionData } from '../interface/transaction-data';
+import { NotificationService } from './notification.service';
+import { NotificationComponent } from '../components/main/transactions/notification/notification.component';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TransactiondataService {
+  constructor(
+    private notificationService: NotificationService,
+    private notificationComponent: NotificationComponent
+  ) {}
+
   private txnDateSource = new BehaviorSubject<string>('');
   currentTxnDate = this.txnDateSource.asObservable();
 
@@ -27,7 +34,6 @@ export class TransactiondataService {
   getOrder(): string {
     const order = this.orderSource.getValue().toUpperCase();
     if (order !== 'BUY' && order !== 'SELL') {
-      throw new Error('Invalid order type. Only "BUY" or "SELL" are allowed.');
     }
     return order;
   }
@@ -46,10 +52,6 @@ export class TransactiondataService {
       broker !== 'TIMSON TRADE' &&
       broker !== 'PHILSTOCKS FINANCIAL'
     ) {
-      throw new Error(
-        'Invalid Broker type. Only "AAA", "Philstocks" or "Timson" are allowed.'
-      );
-      // Insert Error functionality here!
     }
     return broker;
   }
@@ -76,8 +78,6 @@ export class TransactiondataService {
   getQuantity(): number {
     const quantity = this.quantitySource.getValue();
     if (quantity === 0 || quantity == null) {
-      throw new Error('Enter Correct Quantity!');
-      // Insert Error functionality here!
     }
     return quantity;
   }
@@ -94,8 +94,6 @@ export class TransactiondataService {
   getSharePrice(): number {
     const SharePrice = this.sharePriceSource.getValue();
     if (SharePrice === 0 || SharePrice == null) {
-      throw new Error('Enter correct Share Price!');
-      // Insert Error functionality here!
     }
     return SharePrice;
   }
