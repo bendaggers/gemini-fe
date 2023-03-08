@@ -30,8 +30,6 @@ export class NotificationComponent implements OnInit {
       this.color = '#dc3545';
     }
 
-    console.log(this.color);
-
     const liveToast = document.getElementById('liveToast');
 
     if (liveToast) {

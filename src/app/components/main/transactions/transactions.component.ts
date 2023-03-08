@@ -10,6 +10,7 @@ import {
 import { HttpService } from 'src/app/services/http.service';
 import { TransactiondataService } from 'src/app/services/transactiondata.service';
 import { NotificationService } from 'src/app/services/notification.service';
+import { TransactionData } from 'src/app/interface/transaction-data';
 
 import { TransactionListComponent } from './transaction-list/transaction-list.component';
 import { TxndateComponent } from './txndate/txndate.component';
@@ -26,7 +27,6 @@ import { NotificationComponent } from './notification/notification.component';
   styleUrls: ['./transactions.component.scss'],
 })
 export class TransactionsComponent implements OnInit {
-  transaction: any;
   transactions: any = [];
 
   @ViewChild(TransactionListComponent)
@@ -45,18 +45,36 @@ export class TransactionsComponent implements OnInit {
 
   @Output() onSubmitSuccess = new EventEmitter<string>();
 
+  transaction: TransactionData = {
+    txndate: '',
+    order: '',
+    broker: '',
+    ticker: '',
+    quantity: 0,
+    shareprice: 0,
+  };
+
   onSubmit(): void {
-    this.updateTransactionObject();
     this.httpService
-      .postTransaction(this.transactiondataService.getTransaction())
+      .postTransaction(
+        (this.transaction = {
+          txndate: this.transactiondataService.getTransaction().txndate,
+          order: this.transactiondataService.getTransaction().order,
+          broker: this.transactiondataService.getTransaction().broker,
+          ticker: this.transactiondataService.getTransaction().ticker,
+          quantity: this.transactiondataService.getTransaction().quantity,
+          shareprice: this.transactiondataService.getTransaction().shareprice,
+        })
+      )
       .subscribe(
         (response) => {
           this.transactionListComponent.ngOnInit();
-          this.clear(); // Clear Input Fields
+
+          // This will clear the Form.
+          this.clear();
 
           // Notification Component
-          const { ticker, shareprice, quantity, txndate } =
-            this.transactiondataService.getTransaction();
+          const { ticker, shareprice, quantity, txndate } = this.transaction;
 
           this.notificationService.showToast(
             'Transaction successfully submitted!',
@@ -64,24 +82,15 @@ export class TransactionsComponent implements OnInit {
             'success',
             this.notificationComponent
           );
-
-          console.log(this.transactiondataService.getTransaction());
         },
         (error) => {
           console.error(error);
-          console.log(this.transactiondataService.getTransaction());
+          console.log(this.transaction);
         }
       );
-  }
 
-  updateTransactionObject(): void {
-    // Set the value of the txnDate
-    const txnDate = this.transactiondataService.getTxnDate();
-    this.transactiondataService.changeTxnDate(txnDate);
-
-    // Set the value of the order
-    const order = this.transactiondataService.getOrder();
-    this.transactiondataService.changeOrder(order);
+    // This will Reset Input Values stored in memory.
+    this.resetInputValues();
   }
 
   @ViewChild(TxndateComponent)
@@ -109,6 +118,14 @@ export class TransactionsComponent implements OnInit {
     this.tickerComponent.clearTicker();
     this.sharepriceComponent.clearShareprice();
     this.quantityComponent.clearQuantity();
-    this.transactiondataService.resetTransaction();
+  }
+
+  resetInputValues() {
+    this.transactiondataService.changeTxnDate('');
+    this.transactiondataService.changeBroker('');
+    this.transactiondataService.changeOrder('');
+    this.transactiondataService.changeTicker('');
+    this.transactiondataService.changeSharePrice(0);
+    this.transactiondataService.changeQuantity(0);
   }
 }

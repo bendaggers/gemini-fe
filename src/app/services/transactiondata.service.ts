@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { TransactionData } from '../interface/transaction-data';
 
 @Injectable({
   providedIn: 'root',
@@ -103,7 +104,20 @@ export class TransactiondataService {
   // Transaction Object
   //
 
-  getTransaction(): any {
+  transaction: TransactionData = {
+    txndate: '',
+    order: '',
+    broker: '',
+    ticker: '',
+    quantity: 0,
+    shareprice: 0,
+  };
+
+  setTransaction(transaction: any): void {
+    this.transaction = transaction;
+  }
+
+  getTransaction(): TransactionData {
     return {
       txndate: this.getTxnDate(),
       order: this.getOrder(),
@@ -111,17 +125,6 @@ export class TransactiondataService {
       ticker: this.getTicker(),
       quantity: this.getQuantity(),
       shareprice: this.getSharePrice(),
-    };
-  }
-
-  resetTransaction(): any {
-    return {
-      txndate: null,
-      order: null,
-      broker: null,
-      ticker: null,
-      quantity: null,
-      shareprice: null,
     };
   }
 }

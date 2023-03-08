@@ -6,6 +6,10 @@ Transactions - record all stock transactions
 Portfolio - summary of portfolio.
 Screener - real time stock price update.
 
+## v1.2.2 (Transaction Data Object Bug)
+
+- **Fixed!** ~~Found bug at the Submit button when it still remembers the values you have submitted even if the forms are already cleared. Its as if the Transaction Object didn't clear the attributes.~~
+
 ## v1.2.1 (Toast Notifications)
 
 **03/08/2023 - 1:07PM**
@@ -13,7 +17,7 @@ Screener - real time stock price update.
 - Fixed Toast Notifications.
 - Added dynamic color coding, body message and title for Toast Notifications
 
-**Bugs**
+**Discovered Bugs**
 
 - Found bug at the Submit button when it still remembers the values you have submitted even if the forms are already cleared. Its as if the Transaction Object didn't clear the attributes.
 
