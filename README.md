@@ -6,11 +6,10 @@ The platform boasts several exciting features, including the ability to record a
 
 ## Features
 
-Transactions - Record all stock transactions
-
-Portfolio - Summary of all Stock Position.
-
-Screener - Real-time stock price update, technical indicators and candle stick analysis.
+**Transactions:** Keep track of all stock trade transactions.
+**Portfolio:** View a comprehensive summary of your current stock positions.
+**Trade Summary:** Access a report of the user's past trades to conduct a win/loss analysis.
+**Screener:** Receive real-time updates on stock prices, technical indicators, and candlestick analyses.
 
 ## Pending Items
 
