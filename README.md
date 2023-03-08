@@ -3,7 +3,9 @@
 ## Features
 
 Transactions - record all stock transactions
+
 Portfolio - summary of portfolio.
+
 Screener - real time stock price update.
 
 ## v1.3.1 (Notification Toast during Invalid Form Submission)
