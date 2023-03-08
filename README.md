@@ -16,7 +16,8 @@ The platform boasts several exciting features, including the ability to record a
 
 ## Pending Items
 
-- Clickable Individual Transaction through modal
+- Clickable Individual Transaction.
+- Display selected Transaction's detail in a modal.
 - Fix notification body font style and color.
 - Create a back end API Endpoint for Transaction that accepts arguments
 - Create new HTTP Service for the 'single' transaction
