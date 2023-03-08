@@ -31,7 +31,7 @@ Screener - real time stock price update.
 
 **03/08/2023 - 5:14PM**
 
-This feature will display the Transaction Details in to a modal.
+This feature will display the details of the selected Transaction in to a modal.
 
 - Created a Modal Component and Service
 - Created a console.log to identify which row in Transaction List was clicked and return the ID, Ticker, Ave Unit Price.
