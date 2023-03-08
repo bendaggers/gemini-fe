@@ -8,6 +8,33 @@ Portfolio - summary of portfolio.
 
 Screener - real time stock price update.
 
+## Pending Items
+
+- Clickable Individual Transaction through modal
+
+## Future Features
+
+- Change Bootstrap Theme Colors
+- Log in for existing users
+
+## Completed Items
+
+- ~~Create a Modal Service~~
+- ~~Create a Modal Component~~
+- ~~Add notification for Form Validation~~
+- ~~Form Validation before submission~~
+- ~~Toast Notification~~
+- ~~Create Validation if the form is valid or not. Submit button must be disabled or unclickable if not valid or initial state.~~
+
+## v1.4.0 (Display Transaction Details in Modal)
+
+**03/08/2023 - 5:14PM**
+
+This feature will display the Transaction Details in to a modal.
+
+- Created a Modal Component and Service
+- Created a console.log to identify which row in Transaction List was clicked and return the ID, Ticker, Ave Unit Price.
+
 ## v1.3.1 (Notification Toast during Invalid Form Submission)
 
 **03/08/2023 - 4:46PM**
@@ -89,19 +116,3 @@ Screener - real time stock price update.
 
 - Deleted all the components of Transactions Feature
 - Started from scratch
-
-## Pending Items
-
-- Clickable Individual Transaction through modal
-
-## Future Features
-
-- Change Bootstrap Theme Colors
-- Log in for existing users
-
-## Completed Items
-
-- ~~Add notification for Form Validation~~
-- ~~Form Validation before submission~~
-- ~~Toast Notification~~
-- ~~Create Validation if the form is valid or not. Submit button must be disabled or unclickable if not valid or initial state.~~

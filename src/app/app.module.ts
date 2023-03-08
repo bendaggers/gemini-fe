@@ -24,6 +24,7 @@ import { QuantityComponent } from './components/main/transactions/quantity/quant
 import { SharepriceComponent } from './components/main/transactions/shareprice/shareprice.component';
 import { NotificationComponent } from './components/main/transactions/notification/notification.component';
 import { NotificationService } from './services/notification.service';
+import { ModalComponent } from './components/main/transactions/modal/modal.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +43,7 @@ import { NotificationService } from './services/notification.service';
     SharepriceComponent,
     OrderByPipe,
     NotificationComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,

@@ -28,4 +28,12 @@ export class TransactionListComponent implements OnInit {
       }
     );
   }
+
+  onRowClick(txnId: string, ticker: string, aveunitprice: number) {
+    console.log(`
+    Clicked row with transaction ID: ${txnId}
+    ${ticker}
+    ${aveunitprice}
+    `);
+  }
 }

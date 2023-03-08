@@ -13,7 +13,18 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let transaction of transactions | orderBy : 'txndate'">
+    <tr
+      class="transactionRows"
+      *ngFor="let transaction of transactions | orderBy : 'txndate'"
+      id="{{ transaction.txnid }}"
+      (click)="
+        onRowClick(
+          transaction.txnid,
+          transaction.ticker,
+          transaction.aveunitprice
+        )
+      "
+    >
       <td scope="row">{{ transaction.txnno }}</td>
       <td>{{ transaction.txndate }}</td>
       <td>{{ transaction.broker }}</td>
