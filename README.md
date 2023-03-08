@@ -44,6 +44,7 @@ We aim to create a feature that enables users to view transaction details in a m
 
 - Created a Modal Component and Service
 - Created a console.log to identify which row in Transaction List was clicked and return the ID, Ticker, Ave Unit Price.
+- See Pending Items
 
 ## v1.3.1 (Notification Toast during Invalid Form Submission)
 
