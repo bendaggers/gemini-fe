@@ -14,14 +14,6 @@ The platform boasts several exciting features, including the ability to record a
 
 **Screener:** Receive real-time updates on stock prices, technical indicators, and candlestick analyses.
 
-## Pending Items
-
-- Clickable Individual Transaction.
-- Display selected Transaction's detail in a modal.
-- Fix notification body font style and color.
-- Create a back end API Endpoint for Transaction that accepts arguments
-- Create new HTTP Service for the 'single' transaction
-
 ## Future Features
 
 - Change Bootstrap Theme Colors
@@ -42,9 +34,15 @@ The platform boasts several exciting features, including the ability to record a
 
 We aim to create a feature that enables users to view transaction details in a modal by clicking on the desired row in the TransactionList component. Once a user selects a transaction row, the relevant details will be displayed in the modal, providing a more streamlined and user-friendly experience.
 
-- Created a Modal Component and Service
-- Created a console.log to identify which row in Transaction List was clicked and return the ID, Ticker, Ave Unit Price.
-- See Pending Items
+### Pending Items
+
+- ~~Create a Modal Component~~
+- Create service
+- Create a back end API Endpoint for Transaction that accepts arguments
+- Create function to get the selected row's txnid
+- Create new HTTP Service for the 'single' transaction that accepts txnId as a parameter.
+- Display selected Transaction's detail in a modal.
+- Fix notification body font style and color.
 
 ## v1.3.1 (Notification Toast during Invalid Form Submission)
 
