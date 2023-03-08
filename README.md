@@ -38,8 +38,7 @@ The platform boasts several exciting features, including the ability to record a
 - ~~Create Validation if the form is valid or not. Submit button must be disabled or unclickable if not valid or initial state.~~
 
 ## v1.4.0 (Display Transaction Details in Modal)
-
-**03/08/2023 - 5:14PM**
+**In-Progress | 03/08/2023 - 5:14PM**
 
 We aim to create a feature that enables users to view transaction details in a modal by clicking on the desired row in the TransactionList component. Once a user selects a transaction row, the relevant details will be displayed in the modal, providing a more streamlined and user-friendly experience.
 
