@@ -41,7 +41,7 @@ The platform boasts several exciting features, including the ability to record a
 
 **03/08/2023 - 5:14PM**
 
-This feature will display the details of the selected Transaction in to a modal.
+We aim to create a feature that enables users to view transaction details in a modal by clicking on the desired row in the TransactionList component. Once a user selects a transaction row, the relevant details will be displayed in the modal, providing a more streamlined and user-friendly experience.
 
 - Created a Modal Component and Service
 - Created a console.log to identify which row in Transaction List was clicked and return the ID, Ticker, Ave Unit Price.
