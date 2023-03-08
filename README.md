@@ -1,22 +1,29 @@
 # Gemini Front End
 
+**Gemini** is a capstone project made by Ben Michael Oracion. It's main purpose is to record, monitor, analyze stock trading transaction.
+
+In the future, **Gemini** will be capable to display real-time stock prices, candle stick analysis and technical indicators. 
+
 ## Features
 
-Transactions - record all stock transactions
+Transactions - Record all stock transactions
 
-Portfolio - summary of portfolio.
+Portfolio - Summary of all Stock Position.
 
-Screener - real time stock price update.
+Screener - Real-time stock price update, technical indicators and candle stick analysis.
 
 ## Pending Items
 
 - Clickable Individual Transaction through modal
 - Fix notification body font style and color.
+- Create a back end API Endpoint for Transaction that accepts arguments
+- Create new HTTP Service for the 'single' transaction
 
 ## Future Features
 
 - Change Bootstrap Theme Colors
 - Log in for existing users
+- Back end to be published in DigitalOcean 
 
 ## Completed Items
 
