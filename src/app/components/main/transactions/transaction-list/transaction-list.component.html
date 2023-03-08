@@ -19,7 +19,7 @@
       <td>{{ transaction.broker }}</td>
       <td>{{ transaction.order }}</td>
       <td>{{ transaction.ticker | uppercase }}</td>
-      <td class="text-end">{{ transaction.quantity }}</td>
+      <td class="text-end">{{ transaction.quantity | number : "1.0" }}</td>
       <td class="text-end">{{ transaction.shareprice | number : "1.4-4" }}</td>
       <td class="text-end">
         {{ transaction.aveunitprice | number : "1.4-4" }}

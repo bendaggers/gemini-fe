@@ -6,9 +6,20 @@ Transactions - record all stock transactions
 Portfolio - summary of portfolio.
 Screener - real time stock price update.
 
+## v1.2.1 (Toast Notifications)
+
+**03/08/2023 - 1:07PM**
+
+- Fixed Toast Notifications.
+- Added dynamic color coding, body message and title for Toast Notifications
+
+**Bugs**
+
+- Found bug at the Submit button when it still remembers the values you have submitted even if the forms are already cleared. Its as if the Transaction Object didn't clear the attributes.
+
 ## v1.2.0 (Toast Notifications)
 
-**03/09/2023 - 6:29PM**
+**03/07/2023 - 6:29PM**
 
 - Added Toast Notifications if form submission is successful _(not working yet)_.
 

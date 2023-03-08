@@ -16,17 +16,25 @@
         preserveAspectRatio="xMidYMid slice"
         focusable="false"
       >
-        <rect width="100%" height="100%" fill="#007aff"></rect>
+        <rect
+          width="100%"
+          height="100%"
+          xmlns="http://www.w3.org/2000/svg"
+          [attr.fill]="color"
+        ></rect>
       </svg>
-      <strong class="me-auto">Bootstrap</strong>
-      <small>11 mins ago</small>
+
+      <strong class="me-auto">{{ title }}</strong>
+
       <button
-        type="button"
+        type="button ms-auto"
         class="btn-close"
         data-bs-dismiss="toast"
         aria-label="Close"
       ></button>
     </div>
-    <div class="toast-body">message</div>
+    <div class="toast-body">
+      <small>{{ body }}</small>
+    </div>
   </div>
 </div>

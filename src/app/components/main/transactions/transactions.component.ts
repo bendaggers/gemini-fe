@@ -32,6 +32,9 @@ export class TransactionsComponent implements OnInit {
   @ViewChild(TransactionListComponent)
   transactionListComponent!: TransactionListComponent;
 
+  @ViewChild(NotificationComponent)
+  notificationComponent!: NotificationComponent;
+
   constructor(
     private httpService: HttpService,
     private transactiondataService: TransactiondataService,
@@ -43,20 +46,32 @@ export class TransactionsComponent implements OnInit {
   @Output() onSubmitSuccess = new EventEmitter<string>();
 
   onSubmit(): void {
-    // this.updateTransactionObject();
-    // this.httpService
-    //   .postTransaction(this.transactiondataService.getTransaction())
-    //   .subscribe(
-    //     (response) => {
-    //       this.transactionListComponent.ngOnInit();
-    //       this.clear(); // Clear Input Fields
-    //     },
-    //     (error) => {
-    //       console.error(error);
-    //       console.log(this.transactiondataService.getTransaction());
-    //     }
-    //   );
-    this.notificationService.showToast('Hello World!');
+    this.updateTransactionObject();
+    this.httpService
+      .postTransaction(this.transactiondataService.getTransaction())
+      .subscribe(
+        (response) => {
+          this.transactionListComponent.ngOnInit();
+          this.clear(); // Clear Input Fields
+
+          // Notification Component
+          const { ticker, shareprice, quantity, txndate } =
+            this.transactiondataService.getTransaction();
+
+          this.notificationService.showToast(
+            'Transaction successfully submitted!',
+            `${ticker} - ${quantity} shares @ ${shareprice} (${txndate})`,
+            'success',
+            this.notificationComponent
+          );
+
+          console.log(this.transactiondataService.getTransaction());
+        },
+        (error) => {
+          console.error(error);
+          console.log(this.transactiondataService.getTransaction());
+        }
+      );
   }
 
   updateTransactionObject(): void {
@@ -94,5 +109,6 @@ export class TransactionsComponent implements OnInit {
     this.tickerComponent.clearTicker();
     this.sharepriceComponent.clearShareprice();
     this.quantityComponent.clearQuantity();
+    this.transactiondataService.resetTransaction();
   }
 }

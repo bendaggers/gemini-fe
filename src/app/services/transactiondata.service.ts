@@ -113,4 +113,15 @@ export class TransactiondataService {
       shareprice: this.getSharePrice(),
     };
   }
+
+  resetTransaction(): any {
+    return {
+      txndate: null,
+      order: null,
+      broker: null,
+      ticker: null,
+      quantity: null,
+      shareprice: null,
+    };
+  }
 }
