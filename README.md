@@ -20,15 +20,6 @@ The platform boasts several exciting features, including the ability to record a
 - Log in for existing users
 - Back end to be published in DigitalOcean 
 
-## Completed Items
-
-- ~~Create a Modal Service~~
-- ~~Create a Modal Component~~
-- ~~Add notification for Form Validation~~
-- ~~Form Validation before submission~~
-- ~~Toast Notification~~
-- ~~Create Validation if the form is valid or not. Submit button must be disabled or unclickable if not valid or initial state.~~
-
 ## v1.4.0 (Display Transaction Details in Modal)
 **In-Progress | 03/08/2023 - 5:14PM**
 
