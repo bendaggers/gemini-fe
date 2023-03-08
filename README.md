@@ -8,6 +8,8 @@ Screener - real time stock price update.
 
 ## v1.3.1 (Notification Toast during Invalid Form Submission)
 
+**03/08/2023 - 4:46PM**
+
 - Instead of implementing form validation, I have implemented a toast to notify the user to verify the submitted form. Since the user cannot make a POST request if the form is invalid, using the button state is not an ideal or practical approach.
 
 ## v1.3.0 (Form Validation)
