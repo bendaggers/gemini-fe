@@ -36,6 +36,7 @@ We aim to create a feature that enables users to view transaction details in a m
 - ~~Create function to get the selected row's txnid~~
 - ~~Create new HTTP Service for the 'single' transaction that accepts txnId as a parameter.~~
 - Create a working Modal that will be displayed when row is clicked.
+- Modify Table to have a hover effect.
 - Display selected Transaction's detail in a modal.
 - Fix notification body font style and color.
 

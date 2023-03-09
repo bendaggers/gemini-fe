@@ -1,13 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 declare var bootstrap: any;
+declare var $: any;
 
 @Component({
-  selector: 'app-modal',
+  selector: 'modal',
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.scss'],
 })
 export class ModalComponent implements OnInit {
+  body: any = '';
   constructor() {}
 
   ngOnInit(): void {}
+
+  theShowModal(dataObj: any) {
+    this.body = dataObj;
+
+    $('#Modal').modal('show');
+  }
 }

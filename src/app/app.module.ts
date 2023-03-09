@@ -25,6 +25,7 @@ import { SharepriceComponent } from './components/main/transactions/shareprice/s
 import { NotificationComponent } from './components/main/transactions/notification/notification.component';
 import { NotificationService } from './services/notification.service';
 import { ModalComponent } from './components/main/transactions/modal/modal.component';
+import { ModalService } from './services/modal.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +54,13 @@ import { ModalComponent } from './components/main/transactions/modal/modal.compo
     HttpClientModule,
     ReactiveFormsModule,
   ],
-  providers: [OrderByPipe, NotificationService, NotificationComponent],
+  providers: [
+    OrderByPipe,
+    NotificationService,
+    NotificationComponent,
+    ModalService,
+    ModalComponent,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

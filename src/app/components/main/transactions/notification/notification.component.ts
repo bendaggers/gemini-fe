@@ -4,7 +4,7 @@ import { NotificationService } from 'src/app/services/notification.service';
 declare var bootstrap: any;
 
 @Component({
-  selector: 'app-notification',
+  selector: 'notification',
   templateUrl: './notification.component.html',
   styleUrls: ['./notification.component.scss'],
 })
