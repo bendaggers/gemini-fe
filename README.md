@@ -18,11 +18,12 @@ The platform boasts several exciting features, including the ability to record a
 
 - Change Bootstrap Theme Colors
 - Log in for existing users
-- Back end to be published in DigitalOcean 
+- Back end to be published in DigitalOcean
 
 ---
 
 ## v1.4.0 (Display Transaction Details in Modal)
+
 **In-Progress | 03/08/2023 - 5:14PM**
 
 We aim to create a feature that enables users to view transaction details in a modal by clicking on the desired row in the TransactionList component. Once a user selects a transaction row, the relevant details will be displayed in the modal, providing a more streamlined and user-friendly experience.
@@ -30,10 +31,11 @@ We aim to create a feature that enables users to view transaction details in a m
 ### Pending Items
 
 - ~~Create a Modal Component~~
-- Create service
-- Create a back end API Endpoint for Transaction that accepts txnId as arguments
-- Create function to get the selected row's txnid
-- Create new HTTP Service for the 'single' transaction that accepts txnId as a parameter.
+- ~~Create service~~
+- ~~Create a back end API Endpoint for Transaction that accepts txnId as arguments~~
+- ~~Create function to get the selected row's txnid~~
+- ~~Create new HTTP Service for the 'single' transaction that accepts txnId as a parameter.~~
+- Create a working Modal that will be displayed when row is clicked.
 - Display selected Transaction's detail in a modal.
 - Fix notification body font style and color.
 

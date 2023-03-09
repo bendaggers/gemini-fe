@@ -29,11 +29,22 @@ export class TransactionListComponent implements OnInit {
     );
   }
 
-  ngOnInit(): void {
-    this.displayTransactionList();
+  onRowClick(txnId: string) {
+    this.displayTransaction(txnId);
   }
 
-  onRowClick(txnId: string) {
-    // this.displayTransaction(txnId);
+  displayTransaction(txnId: string): void {
+    this.httpService.getTransactionById(txnId).subscribe(
+      (data) => {
+        console.log('Filtered transaction:', data);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
+
+  ngOnInit(): void {
+    this.displayTransactionList();
   }
 }

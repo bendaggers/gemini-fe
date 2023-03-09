@@ -11,12 +11,18 @@ export class HttpService {
 
   constructor(private http: HttpClient) {}
 
-  // GET Transactions List
+  // GET ALL Transactions and Display in TransactionListComponent
   getTransactions(): Observable<any> {
     return this.http.get(this.apiUrl);
   }
 
+  // POST Transaction (User Input)
   postTransaction(transaction: TransactionData): Observable<any> {
     return this.http.post(this.apiUrl, transaction);
+  }
+
+  // GET Single Transaction
+  getTransactionById(txnId: string) {
+    return this.http.get<any>(`${this.apiUrl}${txnId}`);
   }
 }

@@ -18,6 +18,7 @@
       class="transactionRows"
       *ngFor="let transaction of transactions | orderBy : 'txndate'"
       id="{{ transaction.txnid }}"
+      (click)="onRowClick(transaction.txnid)"
     >
       <td scope="row"><i class="bi bi-eye"></i></td>
       <td>{{ transaction.txnno }}</td>
