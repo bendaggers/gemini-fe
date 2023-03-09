@@ -36,6 +36,13 @@ The summary includes all open stock positions, current stock prices, and the val
 
 Additionally, users can view the current gain or loss for each stock position and add remarks to provide additional information. This feature is designed to help users monitor their stock holdings and make informed investment decisions based on their individual goals and risk tolerance.
 
+**Acceptance Criteria**
+
+- The summary should display all open stock positions.
+- The summary should display the current stock prices and the total value of each stock position, and its average unit price.
+- The summary should display the current gain or loss for each stock position.
+- Users should be able to add remarks for each stock position.
+
 ## v1.4.1 (Completed: Display Transaction Details in Modal)
 
 **Completed | 03/09/2023 - 4:44PM**
