@@ -30,6 +30,12 @@ The platform boasts several exciting features, including the ability to record a
 ## v2.0.0 (Portfolio Page)
 **Not Yet Started**
 
+The portfolio feature allows users to view a comprehensive summary of their current stock positions.
+
+The summary includes all open stock positions, current stock prices, and the value of each stock position.
+
+Additionally, users can view the current gain or loss for each stock position and add remarks to provide additional information. This feature is designed to help users monitor their stock holdings and make informed investment decisions based on their individual goals and risk tolerance.
+
 ## v1.4.1 (Completed: Display Transaction Details in Modal)
 
 **Completed | 03/09/2023 - 4:44PM**
