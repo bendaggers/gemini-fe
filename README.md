@@ -27,6 +27,7 @@ The platform boasts several exciting features, including the ability to record a
 ---
 
 ## v2.0.0 (Portfolio Page)
+**Not Yet Started**
 
 ## v1.4.1 (Completed: Display Transaction Details in Modal)
 
@@ -35,6 +36,10 @@ The platform boasts several exciting features, including the ability to record a
 The Display Transaction Details Modal has been fixed by using the @Input() decorator. However, the UI design for the modal is still pending. The Modal Service was not used; instead, the Modal Component was used directly.
 
 Merged the transactions-page branch to main.
+
+### Pending Items
+
+- Utilize Modal Service
 
 ## v1.4.0 (Display Transaction Details in Modal)
 
