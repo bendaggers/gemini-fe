@@ -16,6 +16,7 @@ The platform boasts several exciting features, including the ability to record a
 
 ## Future Iterations
 
+- Modify Modal Implementation by utilizing Modal Service 
 - Portfolio Page
 - Change Bootstrap Theme Colors
 - Modify Table to have a hover effect (TransactionList).
@@ -36,10 +37,6 @@ The platform boasts several exciting features, including the ability to record a
 The Display Transaction Details Modal has been fixed by using the @Input() decorator. However, the UI design for the modal is still pending. The Modal Service was not used; instead, the Modal Component was used directly.
 
 Merged the transactions-page branch to main.
-
-### Pending Items
-
-- Utilize Modal Service
 
 ## v1.4.0 (Display Transaction Details in Modal)
 
