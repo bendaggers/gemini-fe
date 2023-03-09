@@ -33,23 +33,23 @@ export class TransactionListComponent implements OnInit {
     );
   }
 
+  modalBody!: string;
   onRowClick(txnId: string) {
     // This will make a API GET Request to find the txnId of the clicked row and return the object.
-    this.displayTransaction(txnId);
-  }
-
-  displayTransaction(txnId: string): void {
     this.httpService.getTransactionById(txnId).subscribe(
       (data) => {
         // DATA OBJ
-        this.modalComponent.theShowModal(data);
-        // this.modalService.showModalService(data);
+        this.modalBody = data;
+
+        this.modalComponent.theShowModal();
       },
       (error) => {
         console.log(error);
       }
     );
   }
+
+  displayTransaction(txnId: string): void {}
 
   ngOnInit(): void {
     this.displayTransactionList();

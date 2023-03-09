@@ -8,15 +8,18 @@ declare var $: any;
   styleUrls: ['./modal.component.scss'],
 })
 export class ModalComponent implements OnInit {
-  body: any;
+  @Input() contents!: any;
   constructor() {}
 
   ngOnInit(): void {}
 
-  theShowModal(dataObj: any) {
-    this.body = dataObj;
+  theShowModal(contents?: any) {
+    if (contents) {
+      this.contents = contents;
+    }
+
+    console.log(this.contents);
 
     $('#Modal').modal('show');
-    console.log(JSON.parse(dataObj));
   }
 }

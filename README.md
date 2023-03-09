@@ -14,13 +14,24 @@ The platform boasts several exciting features, including the ability to record a
 
 **Screener:** Receive real-time updates on stock prices, technical indicators, and candlestick analyses.
 
-## Future Features
+## Future Iterations
 
 - Change Bootstrap Theme Colors
+- Modify Table to have a hover effect (TransactionList).
+- Table UI Design (TransactionList, Modal for Individual Transaction)
+- Fix Notification body font style and color.
 - Log in for existing users
 - Back end to be published in DigitalOcean
 
 ---
+
+## v1.4.1 (Display Transaction Details in Modal)
+
+**Completed | 03/09/2023 - 4:44PM**
+
+The Display Transaction Details Modal has been fixed by using the @Input() decorator. However, the UI design for the modal is still pending. The Modal Service was not used; instead, the Modal Component was used directly.
+
+Merged the transactions-page branch to main.
 
 ## v1.4.0 (Display Transaction Details in Modal)
 
@@ -35,14 +46,12 @@ We aim to create a feature that enables users to view transaction details in a m
 - ~~Create a back end API Endpoint for Transaction that accepts txnId as arguments~~
 - ~~Create function to get the selected row's txnid~~
 - ~~Create new HTTP Service for the 'single' transaction that accepts txnId as a parameter.~~
-- Create a working Modal that will be displayed when row is clicked.
-- Modify Table to have a hover effect.
-- Display selected Transaction's detail in a modal.
-- Fix notification body font style and color.
+- ~~Create a working Modal that will be displayed when row is clicked.~~
+- ~~Display selected Transaction's detail in a modal.~~
 
 ### Issues & Bugs
 
-- Modal is not displaying the data.
+- Fixed! ~~Modal is not displaying the data.~~
 
 ## v1.3.1 (Notification Toast during Invalid Form Submission)
 
