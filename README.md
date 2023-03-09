@@ -40,6 +40,10 @@ We aim to create a feature that enables users to view transaction details in a m
 - Display selected Transaction's detail in a modal.
 - Fix notification body font style and color.
 
+### Issues & Bugs
+
+- Modal is not displaying the data.
+
 ## v1.3.1 (Notification Toast during Invalid Form Submission)
 
 **03/08/2023 - 4:46PM**

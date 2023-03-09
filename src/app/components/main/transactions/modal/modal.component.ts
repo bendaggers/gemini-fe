@@ -8,7 +8,7 @@ declare var $: any;
   styleUrls: ['./modal.component.scss'],
 })
 export class ModalComponent implements OnInit {
-  body: any = '';
+  body: any;
   constructor() {}
 
   ngOnInit(): void {}
@@ -17,5 +17,6 @@ export class ModalComponent implements OnInit {
     this.body = dataObj;
 
     $('#Modal').modal('show');
+    console.log(JSON.parse(dataObj));
   }
 }

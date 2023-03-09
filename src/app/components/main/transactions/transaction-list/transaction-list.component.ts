@@ -34,13 +34,14 @@ export class TransactionListComponent implements OnInit {
   }
 
   onRowClick(txnId: string) {
-    // This will run a API GET Request to find the txnId of the clicked row and return the object.
+    // This will make a API GET Request to find the txnId of the clicked row and return the object.
     this.displayTransaction(txnId);
   }
 
   displayTransaction(txnId: string): void {
     this.httpService.getTransactionById(txnId).subscribe(
       (data) => {
+        // DATA OBJ
         this.modalComponent.theShowModal(data);
         // this.modalService.showModalService(data);
       },
