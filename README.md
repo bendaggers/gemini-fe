@@ -40,6 +40,7 @@ Additionally, users can view the current gain or loss for each stock position an
 
 - The summary should display all open stock positions.
 - The summary should display the current stock prices and the total value of each stock position, and its average unit price.
+- The summary should display the latest transaction date for each stock.
 - The summary should display the current gain or loss for each stock position.
 - Users should be able to add remarks for each stock position.
 
