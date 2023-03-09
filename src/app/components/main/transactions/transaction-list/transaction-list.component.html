@@ -1,6 +1,7 @@
 <table class="table text-small">
   <thead>
     <tr>
+      <th scope="col"></th>
       <th scope="col">Transaction No.</th>
       <th scope="col">Transaction Date</th>
       <th scope="col">Broker</th>
@@ -17,15 +18,9 @@
       class="transactionRows"
       *ngFor="let transaction of transactions | orderBy : 'txndate'"
       id="{{ transaction.txnid }}"
-      (click)="
-        onRowClick(
-          transaction.txnid,
-          transaction.ticker,
-          transaction.aveunitprice
-        )
-      "
     >
-      <td scope="row">{{ transaction.txnno }}</td>
+      <td scope="row"><i class="bi bi-eye"></i></td>
+      <td>{{ transaction.txnno }}</td>
       <td>{{ transaction.txndate }}</td>
       <td>{{ transaction.broker }}</td>
       <td>{{ transaction.order }}</td>

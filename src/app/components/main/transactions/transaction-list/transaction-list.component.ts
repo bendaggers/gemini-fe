@@ -18,7 +18,7 @@ export class TransactionListComponent implements OnInit {
     private orderByPipe: OrderByPipe
   ) {}
 
-  ngOnInit(): void {
+  displayTransactionList(): void {
     this.httpService.getTransactions().subscribe(
       (data: any[]) => {
         this.transactions = this.orderByPipe.transform(data, 'txndate');
@@ -29,11 +29,11 @@ export class TransactionListComponent implements OnInit {
     );
   }
 
-  onRowClick(txnId: string, ticker: string, aveunitprice: number) {
-    console.log(`
-    Clicked row with transaction ID: ${txnId}
-    ${ticker}
-    ${aveunitprice}
-    `);
+  ngOnInit(): void {
+    this.displayTransactionList();
+  }
+
+  onRowClick(txnId: string) {
+    // this.displayTransaction(txnId);
   }
 }
