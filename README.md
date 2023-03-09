@@ -16,6 +16,7 @@ The platform boasts several exciting features, including the ability to record a
 
 ## Future Iterations
 
+- Portfolio Page
 - Change Bootstrap Theme Colors
 - Modify Table to have a hover effect (TransactionList).
 - Table UI Design (TransactionList, Modal for Individual Transaction)
@@ -25,7 +26,9 @@ The platform boasts several exciting features, including the ability to record a
 
 ---
 
-## v1.4.1 (Display Transaction Details in Modal)
+## v2.0.0 (Portfolio Page)
+
+## v1.4.1 (Completed: Display Transaction Details in Modal)
 
 **Completed | 03/09/2023 - 4:44PM**
 
