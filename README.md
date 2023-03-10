@@ -69,7 +69,7 @@ Users will be able to delete specific transactions.
 - Added a new Global Modal Component.
 - Identified which section of Global Modal are dynamic.
 
-##v1.4.1 (Completed: Display Transaction Details in Modal)
+## v1.4.1 (Completed: Display Transaction Details in Modal)
 
 **Completed | 03/09/2023 - 4:44PM**
 
@@ -77,7 +77,7 @@ The Display Transaction Details Modal has been fixed by using the @Input() decor
 
 - ~~Merged the transactions-page branch to main.~~
 
-##v1.4.0 (Display Transaction Details in Modal)
+## v1.4.0 (Display Transaction Details in Modal)
 
 **In-Progress | 03/08/2023 - 5:14PM**
 
