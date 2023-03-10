@@ -25,4 +25,10 @@ export class HttpService {
   getTransactionById(txnId: string) {
     return this.http.get<any>(`${this.apiUrl}${txnId}`);
   }
+
+  // DELETE Single Transaction
+  deleteTransactionById(txnId: string) {
+    return this.http.delete(`${this.apiUrl}${txnId}`);
+    console.log('delete');
+  }
 }

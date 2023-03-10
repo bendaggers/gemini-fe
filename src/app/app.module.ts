@@ -22,10 +22,15 @@ import { BrokerComponent } from './components/main/transactions/broker/broker.co
 import { TickerComponent } from './components/main/transactions/ticker/ticker.component';
 import { QuantityComponent } from './components/main/transactions/quantity/quantity.component';
 import { SharepriceComponent } from './components/main/transactions/shareprice/shareprice.component';
+import { ModalTransactionComponent } from './components/main/transactions/modal-transaction/modal-transaction.component';
+
+// GLOBAL
 import { NotificationComponent } from './components/notification/notification.component';
 import { NotificationService } from './services/notification.service';
-import { ModalComponent } from './components/main/transactions/modal-transaction/modal.component';
 import { ModalService } from './services/modal.service';
+import { ModalComponent } from './components/modal/modal.component';
+import { DecimalPipe } from '@angular/common';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,6 +49,7 @@ import { ModalService } from './services/modal.service';
     SharepriceComponent,
     OrderByPipe,
     NotificationComponent,
+    ModalTransactionComponent,
     ModalComponent,
   ],
   imports: [
@@ -59,7 +65,9 @@ import { ModalService } from './services/modal.service';
     NotificationService,
     NotificationComponent,
     ModalService,
+    ModalTransactionComponent,
     ModalComponent,
+    DecimalPipe,
   ],
   bootstrap: [AppComponent],
 })

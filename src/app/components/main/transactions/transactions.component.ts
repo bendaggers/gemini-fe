@@ -3,7 +3,6 @@ import {
   EventEmitter,
   OnInit,
   Output,
-  SimpleChanges,
   ViewChild,
 } from '@angular/core';
 
@@ -90,6 +89,8 @@ export class TransactionsComponent implements OnInit {
             'danger',
             this.notificationComponent
           );
+          // This will clear the Form.
+          this.clear();
         }
       );
 

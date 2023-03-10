@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ModalComponent } from '../components/main/transactions/modal-transaction/modal.component';
-declare var $: any;
+import { ModalComponent } from '../components/modal/modal.component';
 
 @Injectable({
   providedIn: 'root',
@@ -8,8 +7,12 @@ declare var $: any;
 export class ModalService {
   constructor(private modalComponent: ModalComponent) {}
 
-  showModalService(dataObj: any): void {
-    // console.log('Modal Service: ' + JSON.stringify(dataObj));
-    this.modalComponent.theShowModal(dataObj);
+  // showModal(title: HTMLElement, Body: HTMLElement, CloseBtn, btnA?, btnB?, btnC?)
+  showModalService(
+    title: HTMLElement,
+    body: HTMLElement,
+    button: HTMLElement
+  ): void {
+    this.modalComponent.displayModal(title, body, button);
   }
 }

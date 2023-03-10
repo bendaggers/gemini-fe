@@ -10,7 +10,7 @@
       <th scope="col">Number of Shares</th>
       <th scope="col">Unit Price</th>
       <th scope="col">Average Unit Price</th>
-      <th scope="col">Total Cost</th>
+      <th scope="col" colspan="2">Total Cost</th>
     </tr>
   </thead>
   <tbody>
@@ -18,21 +18,43 @@
       class="transactionRows"
       *ngFor="let transaction of transactions | orderBy : 'txndate'"
       id="{{ transaction.txnid }}"
-      (click)="onRowClick(transaction.txnid)"
     >
-      <td scope="row"><i class="bi bi-eye"></i></td>
-      <td>{{ transaction.txnno }}</td>
-      <td>{{ transaction.txndate }}</td>
-      <td>{{ transaction.broker }}</td>
-      <td>{{ transaction.order }}</td>
-      <td>{{ transaction.ticker | uppercase }}</td>
-      <td class="text-end">{{ transaction.quantity | number : "1.0" }}</td>
-      <td class="text-end">{{ transaction.shareprice | number : "1.4-4" }}</td>
-      <td class="text-end">
+      <td scope="row" (click)="onRowClick(transaction.txnid)">
+        <i class="bi bi-eye"></i>
+      </td>
+
+      <td (click)="onRowClick(transaction.txnid)">{{ transaction.txnno }}</td>
+      <td (click)="onRowClick(transaction.txnid)">
+        {{ transaction.txndate }}
+      </td>
+      <td (click)="onRowClick(transaction.txnid)">
+        {{ transaction.broker }}
+      </td>
+      <td (click)="onRowClick(transaction.txnid)">{{ transaction.order }}</td>
+      <td (click)="onRowClick(transaction.txnid)">
+        {{ transaction.ticker | uppercase }}
+      </td>
+      <td class="text-end" (click)="onRowClick(transaction.txnid)">
+        {{ transaction.quantity | number : "1.0" }}
+      </td>
+      <td class="text-end" (click)="onRowClick(transaction.txnid)">
+        {{ transaction.shareprice | number : "1.4-4" }}
+      </td>
+      <td class="text-end" (click)="onRowClick(transaction.txnid)">
         {{ transaction.aveunitprice | number : "1.4-4" }}
       </td>
-      <td class="text-end">{{ transaction.totalcost | number : "1.4-4" }}</td>
+
+      <td class="text-end" (click)="onRowClick(transaction.txnid)">
+        {{ transaction.totalcost | number : "1.4-4" }}
+      </td>
+      <td class="text-end">
+        <i
+          class="bi bi-trash3"
+          (click)="onDelete(transaction.txnid)"
+          title="Delete TXN Number: {{ transaction.txnno }}"
+        ></i>
+      </td>
     </tr>
   </tbody>
 </table>
-<modal-transaction [contents]="modalBody" #modalComponent></modal-transaction>
+<modal></modal>

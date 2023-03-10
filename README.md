@@ -59,7 +59,7 @@ Users will be able to delete specific transactions.
 
 ## v1.4.2 (House Keeping & new Global Modal Component)
 
-**In Progress | 03/10/2023 - 9:50AM**
+**In Progress | 03/10/2023 - 9:50AM to 5:12PM**
 
 ### Added or Changed
 
@@ -68,6 +68,11 @@ Users will be able to delete specific transactions.
 - Renamed 'Modal' to 'Modal Transaction Component' to recognize it as local component for TransactionList.
 - Added a new Global Modal Component.
 - Identified which section of Global Modal are dynamic.
+- Added a delete button
+
+### Pending
+
+- Delete transaction confirmation
 
 ## v1.4.1 (Completed: Display Transaction Details in Modal)
 
