@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { HttpService } from 'src/app/services/http.service';
 import { OrderByPipe } from 'src/app/pipes/order-by.pipe';
 import { ModalService } from 'src/app/services/modal.service';
-import { ModalComponent } from '../modal/modal.component';
+import { ModalComponent } from '../modal-transaction/modal.component';
 
 @Component({
   selector: 'transaction-list',

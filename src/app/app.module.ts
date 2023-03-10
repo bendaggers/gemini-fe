@@ -22,9 +22,9 @@ import { BrokerComponent } from './components/main/transactions/broker/broker.co
 import { TickerComponent } from './components/main/transactions/ticker/ticker.component';
 import { QuantityComponent } from './components/main/transactions/quantity/quantity.component';
 import { SharepriceComponent } from './components/main/transactions/shareprice/shareprice.component';
-import { NotificationComponent } from './components/main/transactions/notification/notification.component';
+import { NotificationComponent } from './components/notification/notification.component';
 import { NotificationService } from './services/notification.service';
-import { ModalComponent } from './components/main/transactions/modal/modal.component';
+import { ModalComponent } from './components/main/transactions/modal-transaction/modal.component';
 import { ModalService } from './services/modal.service';
 @NgModule({
   declarations: [

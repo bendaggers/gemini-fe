@@ -16,6 +16,7 @@ The platform boasts several exciting features, including the ability to record a
 
 ## Future Iterations
 
+- Modify Modal Implementation by utilizing Modal Service
 - Portfolio Page
 - Change Bootstrap Theme Colors
 - Modify Table to have a hover effect (TransactionList).
@@ -28,15 +29,55 @@ The platform boasts several exciting features, including the ability to record a
 
 ## v2.0.0 (Portfolio Page)
 
-## v1.4.1 (Completed: Display Transaction Details in Modal)
+**Not Yet Started**
+
+The portfolio feature allows users to view a comprehensive summary of their current stock positions.
+
+The summary includes all open stock positions, current stock prices, and the value of each stock position.
+
+Additionally, users can view the current gain or loss for each stock position and add remarks to provide additional information. This feature is designed to help users monitor their stock holdings and make informed investment decisions based on their individual goals and risk tolerance.
+
+**Acceptance Criteria**
+
+- The summary should display all open stock positions.
+- The summary should display the current stock prices and the total value of each stock position, and its average unit price.
+- The summary should display the latest transaction date for each stock.
+- The summary should display the current gain or loss for each stock position.
+- Users should be able to add remarks for each stock position.
+
+---
+
+## v1.6.0 (Add a Delete button functionality)
+
+**Not Yet Started**
+
+Users will be able to delete specific transactions.
+
+- Create HTTP Delete Request in backend
+- Create another modal asking for confirmation that includes a button of yes or no and an input box.
+- Utilize the use of Modal Service.
+
+## v1.4.2 (House Keeping & new Global Modal Component)
+
+**In Progress | 03/10/2023 - 9:50AM**
+
+### Added or Changed
+
+- Modified Table Hover in Transaction List
+- Moved Notification Component to higher hierarchy to be recognized as a 'Global' Component.
+- Renamed 'Modal' to 'Modal Transaction Component' to recognize it as local component for TransactionList.
+- Added a new Global Modal Component.
+- Identified which section of Global Modal are dynamic.
+
+##v1.4.1 (Completed: Display Transaction Details in Modal)
 
 **Completed | 03/09/2023 - 4:44PM**
 
 The Display Transaction Details Modal has been fixed by using the @Input() decorator. However, the UI design for the modal is still pending. The Modal Service was not used; instead, the Modal Component was used directly.
 
-Merged the transactions-page branch to main.
+- ~~Merged the transactions-page branch to main.~~
 
-## v1.4.0 (Display Transaction Details in Modal)
+##v1.4.0 (Display Transaction Details in Modal)
 
 **In-Progress | 03/08/2023 - 5:14PM**
 

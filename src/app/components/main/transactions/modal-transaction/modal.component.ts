@@ -3,7 +3,7 @@ declare var bootstrap: any;
 declare var $: any;
 
 @Component({
-  selector: 'modal',
+  selector: 'modal-transaction',
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.scss'],
 })

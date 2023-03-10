@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ModalComponent } from '../components/main/transactions/modal/modal.component';
+import { ModalComponent } from '../components/main/transactions/modal-transaction/modal.component';
 declare var $: any;
 
 @Injectable({

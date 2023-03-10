@@ -19,8 +19,7 @@ import { OrderComponent } from './order/order.component';
 import { TickerComponent } from './ticker/ticker.component';
 import { SharepriceComponent } from './shareprice/shareprice.component';
 import { QuantityComponent } from './quantity/quantity.component';
-import { NotificationComponent } from './notification/notification.component';
-import { NgForm } from '@angular/forms';
+import { NotificationComponent } from '../../notification/notification.component';
 
 @Component({
   selector: 'app-transactions',
