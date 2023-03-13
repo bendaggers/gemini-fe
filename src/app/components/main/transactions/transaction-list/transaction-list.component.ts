@@ -1,22 +1,12 @@
-import {
-  Component,
-  ElementRef,
-  EventEmitter,
-  Input,
-  OnInit,
-  Output,
-  ViewChild,
-} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { HttpService } from 'src/app/services/http.service';
 import { OrderByPipe } from 'src/app/pipes/order-by.pipe';
-import { ModalService } from 'src/app/services/modal.service';
-import { ModalTransactionComponent } from '../modal-transaction/modal-transaction.component';
 
 @Component({
   selector: 'transaction-list',
   templateUrl: './transaction-list.component.html',
   styleUrls: ['./transaction-list.component.scss'],
-  providers: [OrderByPipe], // Add OrderByPipe as a provider
+  providers: [OrderByPipe],
 })
 export class TransactionListComponent implements OnInit {
   @Input() transactions: any[] = [];
@@ -25,9 +15,7 @@ export class TransactionListComponent implements OnInit {
 
   constructor(
     private httpService: HttpService,
-    private orderByPipe: OrderByPipe,
-    private modalService: ModalService,
-    private modalTransactionComponent: ModalTransactionComponent
+    private orderByPipe: OrderByPipe
   ) {}
 
   displayTransactionList(): void {
@@ -53,18 +41,6 @@ export class TransactionListComponent implements OnInit {
 
         // Let's try this
         console.log(data.ticker);
-
-        const modalTransactionComponent = new ModalTransactionComponent(
-          this.httpService
-        );
-        modalTransactionComponent.modalMeta(data);
-
-        this.modalService.showModalService(
-          modalTransactionComponent.modalTitle,
-          modalTransactionComponent.modalBody,
-          modalTransactionComponent.modalButton
-        );
-        // this.modalService.showModalService(data.ticker, data.ticker, true);
       },
       (error) => {
         console.log(error);
@@ -76,17 +52,5 @@ export class TransactionListComponent implements OnInit {
 
   ngOnInit(): void {
     this.displayTransactionList();
-  }
-
-  onDelete(txnId: string): void {
-    this.httpService.deleteTransactionById(txnId).subscribe(
-      () => {
-        // Do something after the transaction is deleted, such as refreshing the transaction list.
-        this.displayTransactionList(); // refresh the transaction list
-      },
-      (error: any) => {
-        console.error(`Failed to delete transaction ${txnId}: ${error}`);
-      }
-    );
   }
 }
