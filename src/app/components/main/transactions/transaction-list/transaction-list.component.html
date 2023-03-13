@@ -10,7 +10,7 @@
       <th scope="col">Number of Shares</th>
       <th scope="col">Unit Price</th>
       <th scope="col">Average Unit Price</th>
-      <th scope="col" colspan="2">Total Cost</th>
+      <th scope="col">Total Cost</th>
     </tr>
   </thead>
   <tbody>
@@ -46,12 +46,6 @@
 
       <td class="text-end" (click)="onRowClick(transaction.txnid)">
         {{ transaction.totalcost | number : "1.4-4" }}
-      </td>
-      <td class="text-end">
-        <i
-          class="bi bi-trash3"
-          title="Delete TXN Number: {{ transaction.txnno }}"
-        ></i>
       </td>
     </tr>
   </tbody>
