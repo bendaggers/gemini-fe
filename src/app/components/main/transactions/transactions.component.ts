@@ -19,6 +19,7 @@ import { TickerComponent } from './ticker/ticker.component';
 import { SharepriceComponent } from './shareprice/shareprice.component';
 import { QuantityComponent } from './quantity/quantity.component';
 import { NotificationComponent } from '../../notification/notification.component';
+
 @Component({
   selector: 'app-transactions',
   templateUrl: './transactions.component.html',
