@@ -1,0 +1,14 @@
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+  line-height: 2em;
+}
+
+.sidebar {
+  height: calc(100vh - 190px);
+  display: block;
+}
