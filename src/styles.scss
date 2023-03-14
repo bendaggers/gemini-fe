@@ -1,4 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
 
+body {
+  color: rgb(51, 51, 51);
+  letter-spacing: -0.016em;
+}
+
 /* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
+$primary: #3a0ca3; // Change this to your desired primary color
+$secondary: #6c757d; // Change this to your desired secondary color
+$success: #52b788;
+$danger: #dc2f02;
+$light: #e7ecef;
+$warning: #caf316;
+$info: #267ce9;
+$dark: #220135;
+$muted: #bcb8b1;
+$white: #fff;
+$black: #000;
+$gray: #f8f9fa;
+
+$light: $gray;
+
+// Fonts
+$font-family-base: "Inter", sans-serif;
+
+// Buttons
+$btn-border-radius: 25px;
+$btn-padding-x: 2em;
+$btn-padding-y: 0.5em;
+
+.btn-black {
+  background-color: $black !important;
+  color: #fff !important;
+  border-color: $black !important;
+}
+
+// import Google Fonts
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+// @import "bootstrap/scss/bootstrap";
+@import "node_modules/bootstrap/scss/bootstrap";

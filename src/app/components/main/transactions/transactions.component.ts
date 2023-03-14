@@ -11,7 +11,7 @@ import { HttpService } from 'src/app/services/http.service';
 import { TransactiondataService } from 'src/app/services/transactiondata.service';
 import { TransactionData } from 'src/app/interface/transaction-data';
 
-// import { TransactionListComponent } from './transaction-list/transaction-list.component';
+import { TransactionListComponent } from './transaction-list/transaction-list.component';
 import { TxndateComponent } from './txndate/txndate.component';
 import { BrokerComponent } from './broker/broker.component';
 import { OrderComponent } from './order/order.component';
@@ -28,8 +28,8 @@ import { NgForm } from '@angular/forms';
 export class TransactionsComponent implements OnInit {
   transactions: any = [];
 
-  // @ViewChild(TransactionListComponent)
-  // transactionListComponent!: TransactionListComponent;
+  @ViewChild(TransactionListComponent)
+  transactionListComponent!: TransactionListComponent;
 
   constructor(
     private httpService: HttpService,
@@ -63,7 +63,8 @@ export class TransactionsComponent implements OnInit {
       )
       .subscribe(
         (response) => {
-          // this.transactionListComponent.ngOnInit();
+          // Update Transaction List
+          this.transactionListComponent.ngOnInit();
 
           // This will clear the Form.
           this.clear();
