@@ -1,0 +1,16 @@
+<div class="mb-3">
+  <label for="Broker" class="mb-2">Broker</label>
+  <select
+    class="form-select"
+    id="Broker"
+    name="Broker"
+    aria-label="Broker"
+    (input)="updateBroker($event)"
+    required
+  >
+    <option selected disabled>Select Broker</option>
+    <option value="AAA Equities">AAA Equities</option>
+    <option value="Timson Trade">Timson Trade</option>
+    <option value="Philstocks Financial">Philstocks Financial</option>
+  </select>
+</div>
