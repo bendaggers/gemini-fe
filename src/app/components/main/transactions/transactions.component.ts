@@ -5,7 +5,6 @@ import {
   Output,
   ViewChild,
 } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 
 import { HttpService } from 'src/app/services/http.service';
 import { TransactiondataService } from 'src/app/services/transactiondata.service';
@@ -20,6 +19,8 @@ import { SharepriceComponent } from './shareprice/shareprice.component';
 import { QuantityComponent } from './quantity/quantity.component';
 import { NgForm } from '@angular/forms';
 
+import { ToastService } from 'src/app/services/toast.service';
+
 @Component({
   selector: 'app-transactions',
   templateUrl: './transactions.component.html',
@@ -33,7 +34,8 @@ export class TransactionsComponent implements OnInit {
 
   constructor(
     private httpService: HttpService,
-    private transactiondataService: TransactiondataService
+    private transactiondataService: TransactiondataService,
+    private toastService: ToastService
   ) {}
 
   ngOnInit(): void {}
@@ -69,23 +71,24 @@ export class TransactionsComponent implements OnInit {
           // This will clear the Form.
           this.clear();
 
-          // Notification Component
-          // const { ticker, shareprice, quantity, txndate } = this.transaction;
-
-          // this.notificationService.showToast(
-          //   'Transaction successfully submitted!',
-          //   `${ticker} - ${quantity} shares @ ${shareprice} (${txndate})`,
-          //   'success',
-          //   this.notificationComponent
-          // );
+          // Toast!
+          this.toastService.show(
+            'Transaction Saved!',
+            `You ${this.transaction.order ? 'bought ' : 'sold '} ${
+              this.transaction.quantity
+            } shares of ${this.transaction.ticker} @ ${
+              this.transaction.shareprice
+            }`,
+            'success'
+          );
         },
         (error) => {
-          // this.notificationService.showToast(
-          //   'Error!',
-          //   'Please check the form before submission!',
-          //   'danger',
-          //   this.notificationComponent
-          // );
+          // Toast!
+          this.toastService.show(
+            'Ooops, Error!',
+            'Please complete the form before submitting!',
+            'danger'
+          );
         }
       );
 

@@ -23,6 +23,9 @@ import { QuantityComponent } from './components/main/transactions/quantity/quant
 import { TransactionListComponent } from './components/main/transactions/transaction-list/transaction-list.component';
 import { OrderByPipe } from './pipes/order-by.pipe';
 
+import { NgbToastModule } from '@ng-bootstrap/ng-bootstrap';
+import { ToastComponent } from './components/toast/toast.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,6 +51,8 @@ import { OrderByPipe } from './pipes/order-by.pipe';
     NgbModule,
     HttpClientModule,
     FormsModule,
+    NgbToastModule,
+    ToastComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],

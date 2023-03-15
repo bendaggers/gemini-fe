@@ -30,17 +30,11 @@ export class TransactionListComponent implements OnInit {
   }
 
   modalBody!: string;
-  onRowClick(txnId: string) {
-    // This will make a API GET Request to find the txnId of the clicked row and return the object.
-    this.httpService.getTransactionById(txnId).subscribe(
-      (data) => {
-        // DATA OBJ
-        this.modalBody = data;
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
+  onRowClick(txnId: number) {
+    const filteredTxn = this.transactions.find((t) => t.txnid === txnId);
+    console.log(filteredTxn.ticker);
+
+    // open Modal
   }
 
   displayTransaction(txnId: string): void {}

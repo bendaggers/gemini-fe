@@ -35,6 +35,9 @@ $btn-padding-y: 0.5em;
   border-color: $black !important;
 }
 
+// Toast
+$toast-background-color: rgba($white, 1);
+
 // import Google Fonts
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
