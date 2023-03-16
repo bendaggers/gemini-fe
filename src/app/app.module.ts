@@ -24,7 +24,9 @@ import { TransactionListComponent } from './components/main/transactions/transac
 import { OrderByPipe } from './pipes/order-by.pipe';
 
 import { NgbToastModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { ToastComponent } from './components/toast/toast.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,7 @@ import { ToastComponent } from './components/toast/toast.component';
     QuantityComponent,
     TransactionListComponent,
     OrderByPipe,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,7 +57,7 @@ import { ToastComponent } from './components/toast/toast.component';
     NgbToastModule,
     ToastComponent,
   ],
-  providers: [],
+  providers: [NgbActiveModal],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

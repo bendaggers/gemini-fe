@@ -1,0 +1,26 @@
+<ng-template #modalContent let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Hello !</h4>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">Modal content goes here.</div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-secondary"
+      (click)="modal.dismiss('cancel')"
+    >
+      Close
+    </button>
+    <button type="button" class="btn btn-primary" (click)="modal.close('save')">
+      Save changes
+    </button>
+  </div>
+</ng-template>

@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { HttpService } from 'src/app/services/http.service';
 import { OrderByPipe } from 'src/app/pipes/order-by.pipe';
+import { ModalService } from 'src/app/services/modal.service';
 
 @Component({
   selector: 'transaction-list',
@@ -15,7 +16,8 @@ export class TransactionListComponent implements OnInit {
 
   constructor(
     private httpService: HttpService,
-    private orderByPipe: OrderByPipe
+    private orderByPipe: OrderByPipe,
+    private modalService: ModalService
   ) {}
 
   displayTransactionList(): void {
@@ -32,9 +34,9 @@ export class TransactionListComponent implements OnInit {
   modalBody!: string;
   onRowClick(txnId: number) {
     const filteredTxn = this.transactions.find((t) => t.txnid === txnId);
-    console.log(filteredTxn.ticker);
 
-    // open Modal
+    // Open Modal
+    this.modalService.openModal(filteredTxn.ticker, filteredTxn);
   }
 
   displayTransaction(txnId: string): void {}
